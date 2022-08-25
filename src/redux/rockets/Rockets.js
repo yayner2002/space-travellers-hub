@@ -42,9 +42,9 @@ const rocketsSlice = createSlice({
     [fetchRockets.fulfilled]: (state, { payload }) => {
       const requiredRocketData = payload.map((rocket) => ({
         id: rocket.id,
-        rocket: rocket.rocket_name,
+        name: rocket.rocket_name,
         description: rocket.description,
-        image: rocket.flickr_images,
+        images: rocket.flickr_images,
         reserved: false,
       }));
       return requiredRocketData;
