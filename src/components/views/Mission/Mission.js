@@ -9,16 +9,20 @@ import {
 } from "../../../redux/missions/Missions";
 import "bootstrap/dist/css/bootstrap.css";
 
+let init = true;
 const Mission = () => {
   const missions = useSelector(selectMissions);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!missions.length) dispatch(fetchMissions({ limit: 5 }));
-  }, [dispatch, missions.length]);
+    if (init) {
+      dispatch(fetchMissions({ limit: 5 }));
+      init =false;
+    }
+  }, [dispatch]);
 
   return (
-    <>
+    <div className="table-responsive-sm">
       <table className="table table-hover">
         <thead>
           <tr>
@@ -70,7 +74,7 @@ const Mission = () => {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 

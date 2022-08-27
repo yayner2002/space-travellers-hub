@@ -9,11 +9,11 @@
 
 ## Screenshot
 
-<!-- ![mobile version](/src/assets/images/mobile.png?raw=true "mobile version")
-![desktop version](/src/assets/images/desktop.png?raw=true "desktop version") -->
+![mobile version](/public/mobile.png?raw=true "mobile version")
+![desktop version](/public/desktop.png?raw=true "desktop version")
 ## Live Demo Link (Comming soon)
 
-<!-- [netlify](https://yay-book-store.netlify.app/) -->
+[netlify](https://yay-space-hub.netlify.app/)
 ## Getting Started
 
 **To get a local copy up clone the repo or download the full souce code**

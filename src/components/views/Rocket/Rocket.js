@@ -1,7 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { cancelReserve, fetchRockets, reserveRocket, selectRockets } from "../../../redux/rockets/Rockets";
+import { useDispatch } from "react-redux";
+import { cancelReserve, reserveRocket } from "../../../redux/rockets/Rockets";
 import rocketStyles from "./Rocket.module.css";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -10,7 +8,7 @@ const Rocket = (props) => {
   const dispatch = useDispatch();
 
   return (
-    <div className={rocketStyles.rocketsPage} rocketsPage>
+    <div className={rocketStyles.rocketsPage}>
       <div className={rocketStyles.flickerImage}>
         <img src={image} alt="" />
       </div>

@@ -61,3 +61,29 @@
   height: 45px;
   margin-right: 1rem;
 }
+
+@media(max-width: 375px){
+  .navLeft {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0%;
+    
+  }
+  .logo {
+    width: 85px;
+    height: 45px;
+  }
+  .navLeft h1 {
+    font-size: 25px;
+  }
+  .navRight {
+    width: 100%;
+    
+  }
+  .navLinks {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}

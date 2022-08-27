@@ -1,11 +1,17 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { selectMissions } from '../../../redux/missions/Missions';
-import profileStyles from './Profile.module.css';
+import React from "react";
+import { useSelector } from "react-redux";
+import { selectMissions } from "../../../redux/missions/Missions";
+import { selectRockets } from "../../../redux/rockets/Rockets";
+import profileStyles from "./Profile.module.css";
 
 const Profile = () => {
   const missions = useSelector(selectMissions);
-  const joinedMissions = missions.filter((mission) => mission.reserved === true);
+  const rockets = useSelector(selectRockets);
+
+  const joinedMissions = missions.filter(
+    (mission) => mission.reserved === true
+  );
+  const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
 
   return (
     <div className={profileStyles.joinedSpaceHub}>
@@ -26,14 +32,20 @@ const Profile = () => {
         </table>
       </div>
       <div className="joinedRockets">
-        <table className="table">
+        <table className="table table-hover">
           <thead>
-            <th>My Rockets</th>
+            <tr>
+              <th>My Rockets</th>
+            </tr>
           </thead>
           <tbody>
-            <tr>
-              <td> </td>
-            </tr>
+            {reservedRockets.map((rocket) => {
+              return (
+                <tr key={rocket.id}>
+                  <td>{rocket.name}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

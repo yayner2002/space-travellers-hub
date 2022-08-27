@@ -2,16 +2,22 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRockets, selectRockets } from "../../../redux/rockets/Rockets";
 import Rocket from "./Rocket";
+import rocketStyles from "./Rocket.module.css";
+
+let init = true;
 
 const Rockets = () => {
   const rockets = useSelector(selectRockets);
   const dispatch = useDispatch();
   useEffect(() => {
-    if (!rockets.length) dispatch(fetchRockets());
-  });
+    if (init) {
+      dispatch(fetchRockets());
+      init = false;
+    }
+  }, [dispatch]);
   return (
     <div>
-      <ul>
+      <ul className={rocketStyles.rocketList}>
         {rockets.map((rocket) => {
           return (
             <Rocket
@@ -20,7 +26,7 @@ const Rockets = () => {
               name={rocket.name}
               description={rocket.description}
               reserved={rocket.reserved}
-              image={rocket.images[0]}
+              image={rocket.image}
             />
           );
         })}
