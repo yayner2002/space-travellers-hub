@@ -11,7 +11,7 @@
 
 ![mobile version](/public/mobile.png?raw=true "mobile version")
 ![desktop version](/public/desktop.png?raw=true "desktop version")
-## Live Demo Link (Comming soon)
+## Live Demo Link
 
 [netlify](https://yay-space-hub.netlify.app/)
 ## Getting Started
