@@ -16,6 +16,7 @@ const Rockets = () => {
           return (
             <Rocket
               key={rocket.id}
+              id={rocket.id}
               name={rocket.name}
               description={rocket.description}
               reserved={rocket.reserved}

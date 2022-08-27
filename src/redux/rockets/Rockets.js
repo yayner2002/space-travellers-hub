@@ -41,7 +41,7 @@ const rocketsSlice = createSlice({
   extraReducers: {
     [fetchRockets.fulfilled]: (state, { payload }) => {
       const requiredRocketData = payload.map((rocket) => ({
-        id: rocket.id,
+        id: rocket.rocket_id,
         name: rocket.rocket_name,
         description: rocket.description,
         images: rocket.flickr_images,
