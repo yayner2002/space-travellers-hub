@@ -9,8 +9,7 @@
 
 ## Screenshot
 
-![mobile version](/public/mobile.png?raw=true "mobile version")
-![desktop version](/public/desktop.png?raw=true "desktop version")
+![mockup](/public/space.png?raw=true "mockup")
 ## Live Demo Link
 
 [netlify](https://yay-space-hub.netlify.app/)
